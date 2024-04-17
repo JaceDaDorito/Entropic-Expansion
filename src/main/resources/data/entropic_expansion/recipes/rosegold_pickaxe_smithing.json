@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:fire_charge"
+  },
+  "base": {
+    "item": "minecraft:golden_pickaxe"
+  },
+  "result": {
+    "item": "entropic_expansion:rosegold_pickaxe"
+  },
+  "template": {
+    "item": "entropic_expansion:copper_reinforcement"
+  }
+}
