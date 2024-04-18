@@ -30,7 +30,7 @@ import java.util.function.Consumer;
 public class ItemRoseGoldPickaxe extends PickaxeItem{
 
 	public ItemRoseGoldPickaxe() {
-		super(EEItemTiers.ROSEGOLD, 4, -2.8F, new Item.Properties());
+		super(EEItemTierRegistry.ROSEGOLD, 4, -2.8F, new Item.Properties());
 	}
 
 }

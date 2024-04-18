@@ -9,6 +9,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -38,10 +39,16 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.common.TierSortingRegistry;
 import com.jace.entropic_expansion.*;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.network.payload.TierSortingRegistryPayload;
 import org.slf4j.Logger;
 
 
 public class EEItemTierRegistry{
-	List<Object> roseGoldAfter = new ArrayList<Object>();
-	//public static final TierSortingRegistry ROSEGOLD = TierSortingRegistry.registerTier(EEItemTiers.ROSEGOLD, EntropicExpansion.MODID + ":rosegold_pickaxes", , new List<Object>());
+	
+	public static final Tier ROSEGOLD = TierSortingRegistry.registerTier
+			(EEItemTiers.ROSEGOLD, new ResourceLocation(EntropicExpansion.MODID, "rosegold_pickaxe"), List.of(new ResourceLocation("iron")), List.of(new ResourceLocation("diamond")));
 }

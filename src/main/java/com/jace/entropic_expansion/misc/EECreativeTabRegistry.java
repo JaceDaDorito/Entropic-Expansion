@@ -39,7 +39,7 @@ public class EECreativeTabRegistry {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = CREATIVE_MODE_TABS.register(EntropicExpansion.MODID, () -> CreativeModeTab.builder()
     		.title(Component.translatable("itemGroup.entropic_expansion.creativetab"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> EEItemRegistry.COPPER_REINFORCEMENT.get().getDefaultInstance())
+            .icon(() -> EEItemRegistry.ROSEGOLD_PICKAXE.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
             	for(DeferredHolder<Item, ? extends Item> item : EEItemRegistry.ITEMS.getEntries()){
                     if(item.get() instanceof CustomTabBehavior customTabBehavior){

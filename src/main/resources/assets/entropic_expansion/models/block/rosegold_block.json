@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "entropic_expansion:block/rosegold_block"
+  }
+}

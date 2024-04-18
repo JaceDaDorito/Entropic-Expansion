@@ -34,8 +34,8 @@ import org.slf4j.Logger;
 public class EEItemRegistry {
 	public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(EntropicExpansion.MODID);
 	
-	public static final DeferredItem<Item> COPPER_REINFORCEMENT = ITEMS.registerSimpleItem("copper_reinforcement");
 	public static final DeferredItem<Item> ROSEGOLD_PICKAXE = ITEMS.register("rosegold_pickaxe", ItemRoseGoldPickaxe::new);
+	public static final DeferredItem<Item> ROSEGOLD_INGOT = ITEMS.register("rosegold_ingot", () -> new Item(new Item.Properties()));
 	
 	public static void Init() {
 		

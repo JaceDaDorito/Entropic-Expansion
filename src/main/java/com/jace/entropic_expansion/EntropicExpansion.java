@@ -1,6 +1,7 @@
 package com.jace.entropic_expansion;
 
 import com.jace.entropic_expansion.item.*;
+import com.jace.entropic_expansion.block.*;
 import com.jace.entropic_expansion.misc.EECreativeTabRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -39,15 +40,15 @@ public class EntropicExpansion
 {
     public static final String MODID = "entropic_expansion";
     private static final Logger LOGGER = LogUtils.getLogger();
-    
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
 
     public EntropicExpansion(IEventBus modEventBus)
     {
         modEventBus.addListener(this::commonSetup);
-
+        
+        EEBlockRegistry.BLOCKS.register(modEventBus);
         EEItemRegistry.ITEMS.register(modEventBus);
         EECreativeTabRegistry.CREATIVE_MODE_TABS.register(modEventBus);
+        
         
         NeoForge.EVENT_BUS.register(this);
 

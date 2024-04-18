@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "entropic_expansion:item/copper_reinforcement"
+    "layer0": "entropic_expansion:item/rosegold_ingot"
   }
 }

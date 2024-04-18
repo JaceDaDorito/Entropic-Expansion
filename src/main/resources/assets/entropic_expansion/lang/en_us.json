@@ -2,6 +2,8 @@
 
 "itemGroup.entropic_expansion.creativetab": "Entropic Expansion",
 
-"item.entropic_expansion.rosegold_pickaxe": "Rose Gold Pickaxe"
+"block.entropic_expansion.rosegold_block": "Rose Gold Block",
+"item.entropic_expansion.rosegold_pickaxe": "Rose Gold Pickaxe",
+"item.entropic_expansion.rosegold_ingot": "Rose Gold Ingot"
 
 }

@@ -3,13 +3,15 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "minecraft:copper_ingot"
+      "item": "entropic_expansion:rosegold_ingot"
     }
   },
   "pattern": [
+    "###",
+    "###",
     "###"
   ],
   "result": {
-    "item": "entropic_expansion:copper_reinforcement"
+    "item": "entropic_expansion:rosegold_block"
   }
 }
