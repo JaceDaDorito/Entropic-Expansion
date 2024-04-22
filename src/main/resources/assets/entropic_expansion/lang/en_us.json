@@ -3,7 +3,12 @@
 "itemGroup.entropic_expansion.creativetab": "Entropic Expansion",
 
 "block.entropic_expansion.rosegold_block": "Rose Gold Block",
+"item.entropic_expansion.rosegold_axe": "Rose Gold Axe",
+"item.entropic_expansion.rosegold_hoe": "Rose Gold Hoe",
 "item.entropic_expansion.rosegold_pickaxe": "Rose Gold Pickaxe",
-"item.entropic_expansion.rosegold_ingot": "Rose Gold Ingot"
+"item.entropic_expansion.rosegold_shovel": "Rose Gold Shovel",
+"item.entropic_expansion.rosegold_ingot": "Rose Gold Ingot",
+
+"block.entropic_expansion.transceiver": "Transceiver"
 
 }

@@ -50,5 +50,5 @@ import org.slf4j.Logger;
 public class EEItemTierRegistry{
 	
 	public static final Tier ROSEGOLD = TierSortingRegistry.registerTier
-			(EEItemTiers.ROSEGOLD, new ResourceLocation(EntropicExpansion.MODID, "rosegold_pickaxe"), List.of(new ResourceLocation("iron")), List.of(new ResourceLocation("diamond")));
+			(EEItemTiers.ROSEGOLD, new ResourceLocation(EntropicExpansion.MODID, "rosegold"), List.of(new ResourceLocation("iron")), List.of(new ResourceLocation("diamond")));
 }

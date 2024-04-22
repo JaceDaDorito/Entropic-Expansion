@@ -1,4 +1,4 @@
-package com.jace.entropic_expansion.block;
+package com.jace.entropic_expansion.blockentity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -35,28 +35,14 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import com.jace.entropic_expansion.block.*;
-import com.jace.entropic_expansion.block.Transceiver;
 import com.jace.entropic_expansion.EntropicExpansion;
 import com.jace.entropic_expansion.item.EEItemRegistry;
 import com.jace.entropic_expansion.item.EEBlockItem;
 
-
-
-public class EEBlockRegistry {
-	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(EntropicExpansion.MODID);
+public class EEBlockEntityRegistry {
+	public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, EntropicExpansion.MODID);
 	
-	public static final DeferredBlock<Block> ROSEGOLD_BLOCK = registerBlockAndItem("rosegold_block", 
-			() -> new Block(Block.Properties.of().mapColor(MapColor.COLOR_PINK).instrument(NoteBlockInstrument.BIT).strength(5.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
-	
-	public static final DeferredBlock<Block> TRANSCEIVER = registerBlockAndItem("transceiver", () -> new Transceiver(Block.Properties.of().mapColor(MapColor.COLOR_PINK).sound(SoundType.STONE).isRedstoneConductor(Transceiver::noOption)));
-	
-	public static DeferredBlock<Block> registerBlockAndItem(String name, Supplier<Block> block){
-        return registerBlockAndItem(name, block, new Item.Properties(), false);
-    }
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TransceiverEntity>> TRANSCEIVER = BLOCK_ENTITY_TYPES.register("transceiver", () ->
+    BlockEntityType.Builder.of(TransceiverEntity::new, EEBlockRegistry.TRANSCEIVER.get()).build(null));
 
-    public static DeferredBlock<Block> registerBlockAndItem(String name, Supplier<Block> block, Item.Properties blockItemProps, boolean specialRender){
-    	DeferredBlock<Block> blockObj = BLOCKS.register(name, block);
-        EEItemRegistry.ITEMS.register(name, () -> new EEBlockItem(blockObj, blockItemProps));
-        return blockObj;
-    }
 }

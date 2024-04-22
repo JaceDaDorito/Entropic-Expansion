@@ -29,34 +29,31 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import com.jace.entropic_expansion.block.*;
-import com.jace.entropic_expansion.block.Transceiver;
 import com.jace.entropic_expansion.EntropicExpansion;
 import com.jace.entropic_expansion.item.EEItemRegistry;
 import com.jace.entropic_expansion.item.EEBlockItem;
 
+enum Mineable{
+	PICKAXE,
+	AXE,
+	SHOVEL,
+	HOE,
+	SWORD
+}
 
-
-public class EEBlockRegistry {
-	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(EntropicExpansion.MODID);
+public class EEBlockData {
+	Mineable mineable;
 	
-	public static final DeferredBlock<Block> ROSEGOLD_BLOCK = registerBlockAndItem("rosegold_block", 
-			() -> new Block(Block.Properties.of().mapColor(MapColor.COLOR_PINK).instrument(NoteBlockInstrument.BIT).strength(5.0F, 6.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+	boolean defaultLootTable; //If it drops itself
 	
-	public static final DeferredBlock<Block> TRANSCEIVER = registerBlockAndItem("transceiver", () -> new Transceiver(Block.Properties.of().mapColor(MapColor.COLOR_PINK).sound(SoundType.STONE).isRedstoneConductor(Transceiver::noOption)));
+	public EEBlockData(Mineable mineable, boolean defaultLootTable) {
+		this.mineable = mineable;
+		this.defaultLootTable = defaultLootTable;
+	}
 	
-	public static DeferredBlock<Block> registerBlockAndItem(String name, Supplier<Block> block){
-        return registerBlockAndItem(name, block, new Item.Properties(), false);
-    }
-
-    public static DeferredBlock<Block> registerBlockAndItem(String name, Supplier<Block> block, Item.Properties blockItemProps, boolean specialRender){
-    	DeferredBlock<Block> blockObj = BLOCKS.register(name, block);
-        EEItemRegistry.ITEMS.register(name, () -> new EEBlockItem(blockObj, blockItemProps));
-        return blockObj;
-    }
+	
 }

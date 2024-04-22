@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+	{
+		"item": "minecraft:gold_ingot"
+	},
+	{
+		"item": "minecraft:copper_ingot"
+	},
+	{
+		"item": "minecraft:copper_ingot"
+	},
+	{
+		"item": "minecraft:copper_ingot"
+	}
+  ],
+  "result": {
+    "item": "entropic_expansion:rosegold_ingot"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "entropic_expansion:rosegold_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "entropic_expansion:rosegold_ingot"
+  }
+}

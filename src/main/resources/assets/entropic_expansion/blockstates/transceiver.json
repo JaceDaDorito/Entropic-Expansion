@@ -1,0 +1,50 @@
+{
+  "variants": {
+	"facing=down,powered=false": {
+		"model": "entropic_expansion:block/transceiver",
+		"x": 90
+    	},
+	"facing=down,powered=true": {
+		"model": "entropic_expansion:block/transceiver_on",
+		"x": 90
+    	},
+	"facing=east,powered=false": {
+		"model": "entropic_expansion:block/transceiver",
+		"y": 90
+	},
+	"facing=east,powered=true": {
+		"model": "entropic_expansion:block/transceiver_on",
+		"y": 90
+	},
+	"facing=north,powered=false":{
+		"model": "entropic_expansion:block/transceiver"
+	},
+	"facing=north,powered=true":{
+		"model": "entropic_expansion:block/transceiver_on"
+	},
+	"facing=south,powered=false":{
+		"model": "entropic_expansion:block/transceiver",
+		"y": 180
+	},
+	"facing=south,powered=true":{
+		"model": "entropic_expansion:block/transceiver_on",
+		"y": 180
+	},
+	"facing=up,powered=false": {
+		"model": "entropic_expansion:block/transceiver",
+		"x": 270
+	},
+	"facing=up,powered=true": {
+		"model": "entropic_expansion:block/transceiver_on",
+		"x": 270
+	},
+	"facing=west,powered=false": {
+		"model": "entropic_expansion:block/transceiver",
+		"y": 270
+	},
+	"facing=west,powered=true": {
+		"model": "entropic_expansion:block/transceiver_on",
+		"y": 270
+	}
+  }
+}

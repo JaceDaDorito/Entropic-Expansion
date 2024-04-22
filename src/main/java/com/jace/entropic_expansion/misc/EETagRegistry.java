@@ -12,12 +12,22 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.material.Fluid;
 
-public class EETags {
-	public static class Items{
-		public static final TagKey<Item> ROSEGOLD_REPAIRING = tag("rosegold_repairing");
+public class EETagRegistry {
+	
+	public static class Blocks{
+		public static final TagKey<Block> NEEDS_ROSEGOLD_TOOL = registerBlockTag("needs_rosegold_tool");
 		
-		private static TagKey<Item> tag(String name) {
+		private static TagKey<Block> registerBlockTag(String name) {
+	        return TagKey.create(Registries.BLOCK, new ResourceLocation(EntropicExpansion.MODID, name));
+	    }
+	}
+	
+	public static class Items{
+		public static final TagKey<Item> ROSEGOLD_REPAIRING = registerItemTag("rosegold_repairing");
+
+		private static TagKey<Item> registerItemTag(String name) {
             return TagKey.create(Registries.ITEM, new ResourceLocation(EntropicExpansion.MODID, name));
         }
+		
 	}
 }
